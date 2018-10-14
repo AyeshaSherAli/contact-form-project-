@@ -1,5 +1,5 @@
 <nav>
-<ul ><li><a href="profile.php">Your profile</a></li> <li><a href="showcontact.php">your Contacts</a></li><li> <a href="addcontact.php" >Add contact</a></li><li><a href="deletecontact.php">Delete contact</a></li><li><a>Share contact</a></li><li><a>Search contact</a></li><li><a href="logout.php" >Logout</a>
+<ul ><li><a href="profile.php">Your profile</a></li> <li><a href="showcontact.php">your Contacts</a></li><li> <a href="addcontact.php" >Add contact</a></li><li><a href="delete.php">Delete contact</a></li><li><a>Share contact</a></li></li><li><a href="logout.php" >Logout</a>
 </li></ul>
 </nav>
 

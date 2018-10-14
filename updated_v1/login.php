@@ -1,4 +1,7 @@
-<?php include('db.php'); ?>
+<?php 
+session_start();
+
+include('db.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -54,7 +57,6 @@ if(isset($_POST['submit'])){
 		}
 		else{
 			$res=mysqli_fetch_assoc($result);
-			session_start();
 			$_SESSION['uid']=$res['id'];
 			
 			header('location:profile.php');

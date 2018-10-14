@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('db.php');
+    $uid= $_SESSION['uid'];
+
 
 if(!isset($_SESSION['uid'])){
 header('location:index.php');
@@ -41,34 +43,7 @@ include('nav.php');
  <?php
  
  $uid= $_SESSION['uid'];
- $sqlQuery="Select * from contact where id='$uid'";
- 
-  $result=mysqli_query($con,$sqlQuery); 
-					 $number=mysqli_num_rows($result);
-					  echo "<table border=1> ";
-					  					  echo "<tr><th>First name</th><th>Last name</th>
-							
-										  <th>Phone number</th></tr>";
-										  if($number>1)
-				    while($number>0)
-				 {
-				 
- 
- 
-                   $fname=mysql_result($result,$number-1,"f_name");			
-                   $lname=mysql_result($result,$number-1,"l_name");			
-				   $phone=mysql_result($result,$number-1,"phone_number");			
-                      					  echo "<tr><th>$fname</th><th>$lname</th>
-										  <th>$phone</th></tr>";
-     
-	 
-                 $number--;
-				}	
-					 else
-					 {
-					  echo "<table>";
-					 echo " <br/> The contacts list is empty  !  ";
-					 }
+
 					 					 
  ?>
  

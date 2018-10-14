@@ -42,6 +42,8 @@ include('nav.php');
 
 			   
                  	 $result=mysqli_query($con,"Insert into contact (firstname , lastname, phoneno ) values('$fname','$lname','$phone')") or die(mysqli_error()); 
+					 $res=mysqli_query($con,"select * from contact");
+   $_SESSION['id'] = $res['cid'];
 
 				  	if($result){
 						echo "Added";
